@@ -61,6 +61,7 @@ html {
   .banner__title {
     font-size: 3rem;
     line-height: 3rem;
+    margin-left: -3rem;
   }
 }
 .banner__subtitle {
