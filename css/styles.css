@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  /* @include respond(tab-land) { // width < 1200?
+       font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+   }
+
+   @include respond(tab-port) { // width < 900?
+       font-size: 50%; //1 rem = 8px, 8/16 = 50%
+   }
+
+   @include respond(big-desktop) {
+       font-size: 75%; //1rem = 12, 12/16
+   }*/
+}
+
+body {
+  box-sizing: border-box;
+  /*@include respond(tab-port) {
+      padding: 0;
+  }*/
+}
+
+html {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+  word-wrap: break-word;
+  font-variation-settings: "wdth" 100;
+}
+
+.banner {
+  height: 85vh;
+  background-size: cover;
+  background-position: 80%;
+  padding: 5rem;
+  color: white;
+}
+.banner__text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 7rem;
+}
+.banner__title {
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .banner__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+.banner__subtitle {
+  font-size: 2rem;
+  margin-top: 3rem;
+  line-height: 2.5rem;
+}
+.banner__button {
+  width: 20rem;
+  height: 5rem;
+  display: block;
+  background-color: white;
+  font-size: 2rem;
+  color: #99C1DE;
+  border-radius: 1rem;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 3rem;
+}
+.banner span {
+  display: block;
+}
+
+.middle {
+  font-size: 3rem;
+  text-align: center;
+  background-color: #EAB1CD;
+  padding: 6rem;
+}
+.middle__text {
+  width: 45%;
+  margin: auto;
+  color: white;
+  line-height: 4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  height: 15vh;
+}
+.navbar__logo {
+  flex: 0 0 auto;
+}
+.navbar__logo-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar__logo-image {
+  height: 40px;
+}
+.navbar__menu-list {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar__menu-option {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #99C1DE;
+}
+
+.banner--section {
+  background-image: url(../../img/banner.jpg);
+}
+
+/*# sourceMappingURL=styles.css.map */

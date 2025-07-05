@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as variables;
+
+.banner{
+    height: 85vh;
+    background-size: cover;
+    background-position: 80%;
+    padding: variables.$general-padding;
+    color: white;
+
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 7rem;
+    }
+
+    &__title{
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 7rem;
+
+        @media only screen and (max-width: 37.5em){
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__subtitle{
+        font-size: 2rem;
+        margin-top: 3rem;
+        line-height: 2.5rem;
+    }
+
+    &__button{
+        width: 20rem;
+        height: 5rem;
+        display: block;
+        background-color: white;
+        font-size: 2rem;
+        color: variables.$primary-color-text;
+        border-radius: 1rem;
+        align-content: center;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 3rem;
+
+    }
+
+    span {
+        display: block;
+    }
+        
+}

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as variables;
+
+.middle{
+    font-size: 3rem;
+    text-align: center;
+    background-color: variables.$background-color-secondary;
+    padding: 6rem;
+
+    &__text{
+        width: 45%;
+        margin: auto;
+        color: white;
+        line-height: 4rem;
+    }
+}

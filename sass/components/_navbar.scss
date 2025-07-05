@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as variables;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variables.$general-padding;
+  height: 15vh;
+
+  &__logo {
+    flex: 0 0 auto;
+  }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__logo-image {
+    height: 40px;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__menu-option {
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: variables.$primary-color-text;
+  }
+}
