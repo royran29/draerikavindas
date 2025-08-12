@@ -1,0 +1,178 @@
+.services{
+
+    &__columns{
+        display: flex;
+        gap: 3rem; 
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__column--left,
+    &__column--right{
+        flex: 1;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 6rem; 
+        font-style: italic;
+        font-weight: 700;
+        color: #d1d1d1;
+        margin-bottom: 2.5rem;
+
+        span {
+            font-family: inherit;
+        }
+    }
+
+
+    &__card {
+
+        border-radius: 1.5rem;
+        padding: 2rem 2rem 2rem 1.5rem;
+        background: #fff;
+        box-shadow: 0 0.25rem 1.5rem 0 rgba(0,0,0,0.04);
+        min-height: 11.25rem;
+        max-width: 45.9rem; // increased by 35% from 34rem (~734px)
+        width: 100%;
+        transition: box-shadow 0.2s;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-content {
+            margin-left: 0;
+            margin-top: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        &-title {
+            font-size: 3.75rem; // increased by 50% from 2.5rem
+            font-weight: 500;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: calc(1.2em * 3);
+            word-break: break-word;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            color: #7a7a7a;
+
+            li {
+                margin-bottom: 0.3rem;
+            }
+        }
+
+        &--blue {
+            background: linear-gradient(
+                to bottom,
+                #fff 0%,
+                #fff 50%,
+                #A3C7E1 100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #678EAA;
+            }
+        }
+
+        &--pink {
+            background: linear-gradient(
+                to bottom,
+                #fff 0%,
+                #fff 50%,
+                #FEDDDF 100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #B76F6F;
+            }
+        }
+
+        &--green {
+            background: linear-gradient(
+                to bottom,
+                #fff 0%,
+                #fff 50%,
+                #BADADF  100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #78A3A9;
+            }
+        }
+
+        &--light-purple {
+            background: linear-gradient(
+                to bottom,
+                #fff 0%,
+                #fff 50%,
+                #FBCCF3  100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #CF90C5;
+            }
+        }
+
+        &--purple {
+            background: linear-gradient(
+                            to bottom,
+                            #fff 0%,
+                            #fff 50%,
+                            #D7C8F2 100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #A48ECA;
+            }
+        }
+
+        &--yellow {
+            background: linear-gradient(
+                            to bottom,
+                            #fff 0%,
+                            #fff 50%,
+                            #D1D4A0  100%
+            );
+
+            .services__card-title,
+            .services__card-list {
+                color: #A1A668;
+            }
+        }
+    }
+
+    &__icon {
+        width: 5.25rem;   // increased by 50% from 3.5rem
+        height: 5.25rem;  // increased by 50% from 3.5rem
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 0; // no extra margin needed
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+

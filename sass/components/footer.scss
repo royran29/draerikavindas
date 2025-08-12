@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as variables;
+
+.footer{
+  background-color: variables.$background-color-secondary;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+
+  &-col{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    img{
+      width: 30rem;
+    }
+  }
+  .icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.2rem;
+  }
+
+  &__contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    color: white;
+    font-size: 1.8rem;
+
+    &--item{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}
