@@ -677,6 +677,7 @@ html {
 }
 .footer a {
   text-decoration: none;
+  color: inherit;
 }
 .footer a:visited {
   color: inherit;
@@ -688,7 +689,7 @@ html {
 }
 
 .banner--section {
-  background-image: url(../img/banner.jpg);
+  background-image: url(../../img/banner.jpg);
 }
 
 /*# sourceMappingURL=styles.css.map */
