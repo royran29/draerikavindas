@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "logoAlt1": "Logo diente",
+    "logoAlt2": "Logo texto"
+  },
+  "banner": {
+    "title": {
+      "line1": "Tu sonrisa",
+      "line2": "merece el",
+      "line3": "mejor cuidado"
+    },
+    "subtitle": {
+      "line1": "Con más de 10 años de experiencia,",
+      "line2": "brindamos una atención desde",
+      "line3": "la empatía, con tratamientos integrales",
+      "line4": "que cuidan tu sonrisa y tu bienestar."
+    },
+    "button": "Agenda tu cita"
+  },
+  "middle": {
+    "heading": "Cuidar tu sonrisa es cuidar de ti.",
+    "text": "Te brindamos atención personalizada con un enfoque humano y tratamientos pensados para tu bienestar integral."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "cleaning": {
+      "title": "Limpieza y<br>Blanqueamiento<br>Dental",
+      "description": [
+        "Tratamientos que combinan salud y estética,",
+        "limpieza para mantener tus dientes sanos",
+        "y blanqueamiento para una sonrisa sana y radiante."
+      ]
+    },
+    "aligners": {
+      "title": "Alineadores y<br>ortodoncia<br>convencional",
+      "description": [
+        "Corrige la posición dental con opciones",
+        "modernas y discretas adaptadas",
+        "a tu estilo de vida."
+      ]
+    },
+    "aesthetic": {
+      "title": "Tratamientos<br>estéticos, faciales,<br>orales y gingivales",
+      "description": [
+        "Micropigmentación labial y remodelación de",
+        "encías para una sonrisa y rostro",
+        "mas armonioso."
+      ]
+    },
+    "restorative": {
+      "title": "Restaurativa<br>estética en<br>resina y porcelana",
+      "description": [
+        "Coronas, carillas y resinas estéticas que devuelven",
+        "forma, función y estética a tus dientes, logrando",
+        "un acabado natural y duradero."
+      ]
+    },
+    "surgery": {
+      "title": "Cirugía oral<br>y extracción<br>de cordales",
+      "description": [
+        "Cirugías orales como extracción de cordales,",
+        "frenectomía con técnicas modernas",
+        "para tu bienestar"
+      ]
+    },
+    "general": {
+      "title": "Odontología<br>general<br> y especializada",
+      "description": [
+        "Contamos con especialistas en todas las ramas",
+        "de la odontología como endodoncistas,",
+        "periodoncistas y ortodoncistas"
+      ]
+    }
+  },
+  "footer": {
+    "logoAlt": "Logo footer",
+    "location": "Barrio Las Américas"
+  }
+}

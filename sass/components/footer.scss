@@ -1,26 +1,61 @@
-@use "../abstracts/variables" as variables;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .footer{
-  background-color: variables.$background-color-secondary;
+  background-color: $background-color-secondary;
   height: 40vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10rem;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem $general-padding-mobile;
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem $general-padding-mobile;
+    margin-top: 5rem;
+    gap: 2.5rem;
+  }
+
   &-col{
     display: flex;
     flex: 1;
     justify-content: center;
 
+    @include respond(tab-port) {
+      order: 2;
+    }
+
     img{
       width: 30rem;
+
+      @include respond(tab-port) {
+        width: 25rem;
+      }
+
+      @include respond(phone) {
+        width: 20rem;
+      }
     }
   }
   .icon{
     width: 2.4rem;
     height: 2.4rem;
     margin-right: 1.2rem;
+
+    @include respond(phone) {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
   }
 
   &__contact{
@@ -31,10 +66,44 @@
     color: white;
     font-size: 1.8rem;
 
+    @include respond(tab-port) {
+      order: 1;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      width: 100%;
+      font-size: 1.6rem;
+    }
+
+    @include respond(phone) {
+      order: 1;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
     &--item{
       display: flex;
       align-items: center;
+
+      @include respond(tab-port) {
+        justify-content: center;
+      }
+
+      @include respond(phone) {
+        justify-content: flex-start;
+      }
     }
   }
-
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: inherit;
+  }
 }

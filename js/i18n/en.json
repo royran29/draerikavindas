@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "logoAlt1": "Tooth logo",
+    "logoAlt2": "Text logo"
+  },
+  "banner": {
+    "title": {
+      "line1": "Your smile",
+      "line2": "deserves the",
+      "line3": "best care"
+    },
+    "subtitle": {
+      "line1": "With over 10 years of experience,",
+      "line2": "we provide care rooted in",
+      "line3": "empathy, with comprehensive treatments",
+      "line4": "that care for your smile and well-being."
+    },
+    "button": "Book appointment"
+  },
+  "middle": {
+    "heading": "Taking care of your smile is taking care of yourself.",
+    "text": "We provide personalized care with a human approach and treatments designed for your overall well-being."
+  },
+  "services": {
+    "title": "Our Services",
+    "cleaning": {
+      "title": "Cleaning and<br>Teeth<br>Whitening",
+      "description": [
+        "Treatments that combine health and aesthetics,",
+        "cleaning to keep your teeth healthy",
+        "and whitening for a healthy, radiant smile."
+      ]
+    },
+    "aligners": {
+      "title": "Aligners and<br>conventional<br>orthodontics",
+      "description": [
+        "Correct dental position with modern",
+        "and discreet options adapted",
+        "to your lifestyle."
+      ]
+    },
+    "aesthetic": {
+      "title": "Aesthetic,<br>facial, oral and<br>gingival treatments",
+      "description": [
+        "Lip micropigmentation and gum",
+        "remodeling for a more harmonious",
+        "smile and face."
+      ]
+    },
+    "restorative": {
+      "title": "Aesthetic<br>restorative in<br>resin and porcelain",
+      "description": [
+        "Crowns, veneers and aesthetic resins that restore",
+        "shape, function and aesthetics to your teeth,",
+        "achieving a natural and lasting finish."
+      ]
+    },
+    "surgery": {
+      "title": "Oral surgery<br>and wisdom<br>teeth extraction",
+      "description": [
+        "Oral surgeries such as wisdom teeth extraction,",
+        "frenectomy with modern techniques",
+        "for your well-being"
+      ]
+    },
+    "general": {
+      "title": "General<br>and specialized<br>dentistry",
+      "description": [
+        "We have specialists in all branches",
+        "of dentistry such as endodontists,",
+        "periodontists and orthodontists"
+      ]
+    }
+  },
+  "footer": {
+    "logoAlt": "Footer logo",
+    "location": "Las Américas Neighborhood"
+  }
+}

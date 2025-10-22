@@ -1,24 +1,63 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .services{
 
     &__columns{
         display: flex;
-        gap: 3rem; 
+        gap: 3rem;
         max-width: 80rem;
         margin: 0 auto;
+        padding: 0 2rem;
+        align-items: stretch;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 $general-padding-mobile;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 $general-padding-mobile;
+        }
     }
 
     &__column--left,
     &__column--right{
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 
     &__title {
         text-align: center;
-        font-size: 6rem; 
+        font-size: 6rem;
         font-style: italic;
         font-weight: 700;
         color: #d1d1d1;
         margin-bottom: 2.5rem;
+
+        @include respond(tab-land) {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
 
         span {
             font-family: inherit;
@@ -32,12 +71,25 @@
         padding: 2rem 2rem 2rem 1.5rem;
         background: #fff;
         box-shadow: 0 0.25rem 1.5rem 0 rgba(0,0,0,0.04);
-        min-height: 11.25rem;
+        height: 100%;
         max-width: 45.9rem; // increased by 35% from 34rem (~734px)
         width: 100%;
         transition: box-shadow 0.2s;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tab-port) {
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        @include respond(phone) {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
         &-content {
             margin-left: 0;
@@ -46,6 +98,10 @@
             flex-direction: column;
             justify-content: flex-start;
             width: 100%;
+
+            @include respond(phone) {
+                margin-top: 1rem;
+            }
         }
 
         &-title {
@@ -60,14 +116,32 @@
             text-overflow: ellipsis;
             max-height: calc(1.2em * 3);
             word-break: break-word;
+
+            @include respond(tab-land) {
+                font-size: 3rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 2.8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+                margin-bottom: 0.8rem;
+            }
         }
 
         &-list {
             list-style: none;
             padding: 0;
             margin: 0;
-            font-size: 1rem;
+            font-size: 1.4rem;
             color: #7a7a7a;
+            line-height: 1.6;
+
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
 
             li {
                 margin-bottom: 0.3rem;
@@ -167,6 +241,16 @@
         justify-content: center;
         flex-shrink: 0;
         margin-bottom: 0; // no extra margin needed
+
+        @include respond(tab-port) {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        @include respond(phone) {
+            width: 4rem;
+            height: 4rem;
+        }
 
         img {
             width: 100%;

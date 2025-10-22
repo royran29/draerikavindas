@@ -1,11 +1,24 @@
-@use "../abstracts/variables" as variables;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .banner{
     height: 85vh;
     background-size: cover;
     background-position: 80%;
-    padding: variables.$general-padding;
+    padding: $general-padding;
     color: white;
+
+    @include respond(tab-port) {
+        padding: $general-padding-mobile;
+        height: 70vh;
+        background-position: 70%;
+    }
+
+    @include respond(phone) {
+        padding: $general-padding-mobile;
+        height: 60vh;
+        background-position: 78% center;
+    }
 
     &__text-box{
         display: flex;
@@ -13,6 +26,14 @@
         justify-content: center;
         flex-shrink: 0;
         margin-top: 7rem;
+
+        @include respond(tab-port) {
+            margin-top: 4rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 2rem;
+        }
     }
 
     &__title{
@@ -20,10 +41,19 @@
         font-weight: 400;
         line-height: 7rem;
 
-        @media only screen and (max-width: 37.5em){
+        @include respond(tab-land) {
+            font-size: 5rem;
+            line-height: 5.5rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+
+        @include respond(phone) {
             font-size: 3rem;
-            line-height: 3rem;
-            margin-left: -3rem;
+            line-height: 3.5rem;
         }
     }
 
@@ -31,6 +61,18 @@
         font-size: 2rem;
         margin-top: 3rem;
         line-height: 2.5rem;
+
+        @include respond(tab-port) {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            line-height: 2.2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+            margin-top: 1.5rem;
+            line-height: 2rem;
+        }
     }
 
     &__button{
@@ -39,17 +81,30 @@
         display: block;
         background-color: white;
         font-size: 2rem;
-        color: variables.$primary-color-text;
+        color: $primary-color-text;
         border-radius: 1rem;
         align-content: center;
         text-align: center;
         text-decoration: none;
         margin-top: 3rem;
 
+        @include respond(tab-port) {
+            width: 18rem;
+            height: 4.5rem;
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+        }
+
+        @include respond(phone) {
+            width: 16rem;
+            height: 4rem;
+            font-size: 1.6rem;
+            margin-top: 2rem;
+        }
     }
 
     span {
         display: block;
     }
-        
+
 }

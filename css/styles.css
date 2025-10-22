@@ -1,3 +1,21 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Desktop (default)
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Usage:
+@include respond(phone) {
+    // styles for phones
+}
+*/
 *,
 *::after,
 *::before {
@@ -8,24 +26,30 @@
 
 html {
   font-size: 62.5%;
-  /* @include respond(tab-land) { // width < 1200?
-       font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-   }
-
-   @include respond(tab-port) { // width < 900?
-       font-size: 50%; //1 rem = 8px, 8/16 = 50%
-   }
-
-   @include respond(big-desktop) {
-       font-size: 75%; //1rem = 12, 12/16
-   }*/
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
-  /*@include respond(tab-port) {
-      padding: 0;
-  }*/
 }
 
 html {
@@ -45,6 +69,20 @@ html {
   padding: 5rem;
   color: white;
 }
+@media only screen and (max-width: 56.25em) {
+  .banner {
+    padding: 2rem;
+    height: 70vh;
+    background-position: 70%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .banner {
+    padding: 2rem;
+    height: 60vh;
+    background-position: 78% center;
+  }
+}
 .banner__text-box {
   display: flex;
   flex-direction: column;
@@ -52,22 +90,57 @@ html {
   flex-shrink: 0;
   margin-top: 7rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .banner__text-box {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .banner__text-box {
+    margin-top: 2rem;
+  }
+}
 .banner__title {
   font-size: 7rem;
   font-weight: 400;
   line-height: 7rem;
 }
+@media only screen and (max-width: 75em) {
+  .banner__title {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .banner__title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .banner__title {
     font-size: 3rem;
-    line-height: 3rem;
-    margin-left: -3rem;
+    line-height: 3.5rem;
   }
 }
 .banner__subtitle {
   font-size: 2rem;
   margin-top: 3rem;
   line-height: 2.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .banner__subtitle {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    line-height: 2.2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .banner__subtitle {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    line-height: 2rem;
+  }
 }
 .banner__button {
   width: 20rem;
@@ -82,6 +155,22 @@ html {
   text-decoration: none;
   margin-top: 3rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .banner__button {
+    width: 18rem;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .banner__button {
+    width: 16rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+}
 .banner span {
   display: block;
 }
@@ -92,11 +181,41 @@ html {
   background-color: #EAB1CD;
   padding: 6rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .middle {
+    font-size: 2.5rem;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .middle {
+    font-size: 2rem;
+    padding: 3rem 2rem;
+  }
+}
 .middle__text {
   width: 45%;
   margin: auto;
   color: white;
   line-height: 4rem;
+}
+@media only screen and (max-width: 75em) {
+  .middle__text {
+    width: 60%;
+    line-height: 3.5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .middle__text {
+    width: 75%;
+    line-height: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .middle__text {
+    width: 90%;
+    line-height: 2.8rem;
+  }
 }
 
 .navbar {
@@ -106,6 +225,19 @@ html {
   padding: 5rem;
   height: 15vh;
 }
+@media only screen and (max-width: 56.25em) {
+  .navbar {
+    padding: 2rem;
+    height: 12vh;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar {
+    padding: 2rem;
+    height: 10vh;
+    justify-content: space-between;
+  }
+}
 .navbar__logo {
   flex: 0 0 auto;
 }
@@ -114,8 +246,23 @@ html {
   align-items: center;
   gap: 0.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .navbar__logo-box {
+    gap: 0.3rem;
+  }
+}
 .navbar__logo-image {
   height: 40px;
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar__logo-image {
+    height: 35px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__logo-image {
+    height: 30px;
+  }
 }
 .navbar__menu-list {
   display: flex;
@@ -125,10 +272,85 @@ html {
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 75em) {
+  .navbar__menu-list {
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar__menu-list {
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__menu-list {
+    gap: 2rem;
+  }
+}
 .navbar__menu-option {
   cursor: pointer;
   font-size: 1.6rem;
   color: #99C1DE;
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__menu-option {
+    font-size: 1.4rem;
+  }
+}
+.navbar__lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 2px solid #99C1DE;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__lang-toggle {
+    gap: 0.6rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+.navbar__lang-separator {
+  color: #99C1DE;
+  font-size: 1.4rem;
+  font-weight: 300;
+  user-select: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__lang-separator {
+    font-size: 1.2rem;
+  }
+}
+.navbar__lang-option {
+  background-color: transparent;
+  border: none;
+  color: #99C1DE;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  opacity: 0.5;
+  border-radius: 0.3rem;
+}
+.navbar__lang-option:hover {
+  opacity: 0.7;
+}
+.navbar__lang-option--active {
+  background-color: #99C1DE;
+  color: white;
+  opacity: 1;
+}
+.navbar__lang-option--active:hover {
+  opacity: 1;
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar__lang-option {
+    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem;
+  }
 }
 
 .services__columns {
@@ -136,9 +358,33 @@ html {
   gap: 3rem;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 0 2rem;
+  align-items: stretch;
+}
+@media only screen and (max-width: 56.25em) {
+  .services__columns {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .services__columns {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
 }
 .services__column--left, .services__column--right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .services__column--left, .services__column--right {
+    width: 100%;
+  }
 }
 .services__title {
   text-align: center;
@@ -148,6 +394,24 @@ html {
   color: #d1d1d1;
   margin-bottom: 2.5rem;
 }
+@media only screen and (max-width: 75em) {
+  .services__title {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .services__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .services__title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
 .services__title span {
   font-family: inherit;
 }
@@ -156,12 +420,27 @@ html {
   padding: 2rem 2rem 2rem 1.5rem;
   background: #fff;
   box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.04);
-  min-height: 11.25rem;
+  height: 100%;
   max-width: 45.9rem;
   width: 100%;
   transition: box-shadow 0.2s;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 56.25em) {
+  .services__card {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .services__card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .services__card-content {
   margin-left: 0;
@@ -170,6 +449,11 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .services__card-content {
+    margin-top: 1rem;
+  }
 }
 .services__card-title {
   font-size: 3.75rem;
@@ -184,12 +468,34 @@ html {
   max-height: 3.6em;
   word-break: break-word;
 }
+@media only screen and (max-width: 75em) {
+  .services__card-title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .services__card-title {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .services__card-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+}
 .services__card-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #7a7a7a;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 37.5em) {
+  .services__card-list {
+    font-size: 1.3rem;
+  }
 }
 .services__card-list li {
   margin-bottom: 0.3rem;
@@ -245,6 +551,18 @@ html {
   flex-shrink: 0;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 56.25em) {
+  .services__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .services__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 .services__icon img {
   width: 100%;
   height: auto;
@@ -265,18 +583,58 @@ html {
   align-items: center;
   margin-top: 10rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    gap: 2.5rem;
+  }
+}
 .footer-col {
   display: flex;
   flex: 1;
   justify-content: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer-col {
+    order: 2;
+  }
+}
 .footer-col img {
   width: 30rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer-col img {
+    width: 25rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer-col img {
+    width: 20rem;
+  }
 }
 .footer .icon {
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 1.2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
 }
 .footer__contact {
   display: grid;
@@ -285,13 +643,52 @@ html {
   color: white;
   font-size: 1.8rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer__contact {
+    order: 1;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__contact {
+    order: 1;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
 .footer__contact--item {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer__contact--item {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__contact--item {
+    justify-content: flex-start;
+  }
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:visited {
+  color: inherit;
+}
+.footer a:hover,
+.footer a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 
 .banner--section {
-  background-image: url(../../img/banner.jpg);
+  background-image: url(../img/banner.jpg);
 }
 
 /*# sourceMappingURL=styles.css.map */

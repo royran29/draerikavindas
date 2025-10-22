@@ -1,15 +1,41 @@
-@use "../abstracts/variables" as variables;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .middle{
     font-size: 3rem;
     text-align: center;
-    background-color: variables.$background-color-secondary;
+    background-color: $background-color-secondary;
     padding: 6rem;
+
+    @include respond(tab-port) {
+        font-size: 2.5rem;
+        padding: 4rem $general-padding-mobile;
+    }
+
+    @include respond(phone) {
+        font-size: 2rem;
+        padding: 3rem $general-padding-mobile;
+    }
 
     &__text{
         width: 45%;
         margin: auto;
         color: white;
         line-height: 4rem;
+
+        @include respond(tab-land) {
+            width: 60%;
+            line-height: 3.5rem;
+        }
+
+        @include respond(tab-port) {
+            width: 75%;
+            line-height: 3rem;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            line-height: 2.8rem;
+        }
     }
 }

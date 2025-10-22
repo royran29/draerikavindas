@@ -12,15 +12,22 @@
      <title>dra. erika vindas</title>
 </head>
 <body>
+  <script src="js/i18n.js"></script>
 
   <nav class="navbar">
     <div class="navbar__logo">
       <a href="#">
         <div class="navbar__logo-box">
-          <img class="navbar__logo-image" src="img/logo-diente.png" alt="Logo 1">
-          <img class="navbar__logo-image" src="img/lgoo-text.png" alt="Logo 2">
+          <img class="navbar__logo-image" src="img/logo-diente.png" alt="Logo 1" data-i18n-alt="navbar.logoAlt1">
+          <img class="navbar__logo-image" src="img/lgoo-text.png" alt="Logo 2" data-i18n-alt="navbar.logoAlt2">
         </div>
       </a>
+    </div>
+
+    <div class="navbar__lang-toggle">
+      <button class="navbar__lang-option navbar__lang-option--active" data-lang="es">ES</button>
+      <span class="navbar__lang-separator">|</span>
+      <button class="navbar__lang-option" data-lang="en">EN</button>
     </div>
 
   </nav>
@@ -28,17 +35,162 @@
   <main>
 
     <section class="banner banner--section">
-      <div class="banner__text-box">  
+      <div class="banner__text-box">
         <h2 class="banner__title">
-          <span>Sitio en</span>
-          <span>construcción, </span>
-          <span>regresa pronto.</span>
+          <span data-i18n="banner.title.line1">Tu sonrisa</span>
+          <span data-i18n="banner.title.line2">merece el</span>
+          <span data-i18n="banner.title.line3">mejor cuidado</span>
         </h2>
 
+        <p class="banner__subtitle">
+          <span data-i18n="banner.subtitle.line1">Con más de 10 años de experiencia,</span>
+          <span data-i18n="banner.subtitle.line2">brindamos una atención desde </span>
+          <span data-i18n="banner.subtitle.line3">la empatía, con tratamientos integrales</span>
+          <span data-i18n="banner.subtitle.line4">que cuidan tu sonrisa y tu bienestar.</span>
+        </p>
+      </div>
+
+      <div class="banner__button-box">
+        <a class="banner__button" target="_blank" href="https://wa.me/50688025566?text=Hola%20me%20gustaria%20agendar%20una%20cita" data-i18n="banner.button">Agenda tu cita</a>
+      </div>
+    </section>
+    
+    <section class="middle">
+      <div class="middle__text">
+        <b data-i18n="middle.heading">Cuidar tu sonrisa es cuidar de ti.</b>
+      </div>
+      <div class="middle__text">
+        <p data-i18n="middle.text">Te brindamos atención personalizada con un enfoque humano y tratamientos pensados para tu bienestar integral.</p>
       </div>
     </section>
 
+    <section class="services">
+      <h2 class="services__title"><span data-i18n="services.title">Nuestros Servicios</span></h2>
+      <div class="services__columns">
+        <div class="services__column--left">
+          <div class="services__card services__card--blue">
+            <div class="services__icon">
+              <img src="img/icono-diente.svg" alt="Icono diente">
+            </div>
+            <div class="services__card-content">
+              <div class="services__card-title" data-i18n="services.cleaning.title">Limpieza y<br>Blanqueamiento<br>Dental</div>
+              <ul class="services__card-list" data-i18n-list="services.cleaning.description">
+                <li>Tratamientos que combinan salud y estética,</li>
+                <li>limpieza para mantener tus dientes sanos</li>
+                <li>y blanqueamiento para una sonrisa sana y radiante.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="services__card services__card--pink">
+            <div class="services__icon">
+              <img src="img/icono-placa.svg" alt="Icono placa">
+            </div>
+            <div class="services__card-content">
+              <div class="services__card-title" data-i18n="services.aligners.title">Alineadores y<br>ortodoncia<br>convencional</div>
+              <ul class="services__card-list" data-i18n-list="services.aligners.description">
+                <li>Corrige la posición dental con opciones</li>
+                <li>modernas y discretas adaptadas</li>
+                <li>a tu estilo de vida.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="services__card services__card--light-purple">
+            <div class="services__icon">
+              <img src="img/icono-labios.svg" alt="Icono labios">
+            </div>
+            <div class="services__card-content">
+            <div class="services__card-title" data-i18n="services.aesthetic.title">Tratamientos<br>estéticos, faciales,<br>orales y gingivales</div>
+              <ul class="services__card-list" data-i18n-list="services.aesthetic.description">
+                <li>Micropigmentación labial y remodelación de</li>
+                <li>encías para una sonrisa y rostro</li>
+                <li>mas armonioso.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="services__column--right">
+          <div class="services__card services__card--green">
+            <div class="services__icon">
+              <img src="img/icono-brackets.svg" alt="Icono brackets">
+            </div>
+            <div class="services__card-content">
+              <div class="services__card-title" data-i18n="services.restorative.title">Restaurativa<br>estética en<br>resina y porcelana</div>
+              <ul class="services__card-list" data-i18n-list="services.restorative.description">
+                <li>Coronas, carillas y resinas estéticas que devuelven</li>
+                <li>forma, función y estética a tus dientes, logrando</li>
+                <li>un acabado natural y duradero.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="services__card services__card--yellow">
+            <div class="services__icon">
+              <img src="img/icono-extraccion.svg" alt="Icono niño">
+            </div>
+            <div class="services__card-content">
+              <div class="services__card-title" data-i18n="services.surgery.title">Cirugía oral<br>y extracción<br>de cordales</div>
+              <ul class="services__card-list" data-i18n-list="services.surgery.description">
+                <li>Cirugías orales como extracción de cordales,</li>
+                <li>frenectomía con técnicas modernas</li>
+                <li>para tu bienestar</li>
+              </ul>
+            </div>
+          </div>
+          <div class="services__card services__card--purple">
+            <div class="services__icon">
+              <img src="img/icono-microscopio.svg" alt="Icono microscopio">
+            </div>
+            <div class="services__card-content">
+              <div class="services__card-title" data-i18n="services.general.title">Odontología<br>general<br> y especializada</div>
+              <ul class="services__card-list" data-i18n-list="services.general.description">
+                <li>Contamos con especialistas en todas las ramas</li>
+                <li>de la odontología como endodoncistas,</li>
+                <li>periodoncistas y ortodoncistas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="testimonials">
+
+    </section> -->
+
   </main>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <img src="img/logo_footer.svg" alt="Logo footer" data-i18n-alt="footer.logoAlt">
+    </div>
+
+    <div class="footer-col footer__contact ">
+      <div class="footer__contact--item">
+        <img class="icon" src="img/whatsapp.svg" alt="Icono whatsapp">
+        <span><a href="https://wa.me/50688025566?text=Hola%20me%20gustaria%20agendar%20una%20cita" target="_blank">8802-5566</a></span>
+      </div>
+
+      <div class="footer__contact--item">
+        <img class="icon" src="img/facebook.svg" alt="Icono facebook">
+        <span><a href="https://www.facebook.com/liberasonrisas" target="_blank">dra.erikavindas</a></span>
+      </div>
+
+      <div class="footer__contact--item">
+        <img class="icon" src="img/phone.svg" alt="Icono telefono">
+        <span>2770-5566</span>
+      </div>
+
+      <div class="footer__contact--item">
+        <img class="icon" src="img/instagram.svg" alt="Icono insta">
+        <span><a href="https://www.instagram.com/dra.erikavindas" target="_blank">dra.erikavindas</a></span>
+      </div>
+
+      <div class="footer__contact--item">
+        <img class="icon" src="img/location.svg" alt="Icono locacion">
+        <span data-i18n="footer.location">Barrio Las Américas</span>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
 </html>
